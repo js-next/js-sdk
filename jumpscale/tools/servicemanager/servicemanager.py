@@ -169,7 +169,7 @@ class ServiceManager(Base):
         """
 
         for service in list(self.services.keys()):
-            self.stop_service(service)
+            self.stop_service(service, block=False)
 
     def add_service(self, service_name, service_path):
         """Add a new background service to be managed and scheduled by the service manager
